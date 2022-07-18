@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import './App.scss';
 import axios from 'axios';
 
-const backend_base_url = 'http://localhost:3045';
+//const backend_base_url = 'http://localhost:3045';
+const backend_base_url = import.meta.env.VITE_BACKEND_BASE_URL || 'http://localhost:3045';
 
 function App() {
 	const [jobSources, setJobSources] = useState([]);
